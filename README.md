@@ -12,7 +12,7 @@ This project leverages machine learning models such as Support Vector Machines (
 
 Preliminary results show high accuracy (~98%) and strong recall (~99%), effectively detecting phishing emails while minimizing false negatives. The system can be integrated with Gmail and Outlook APIs to automatically filter phishing emails into spam folders. Future enhancements include advanced deep learning models (such as BERT), real-time phishing link, and introduce sender reputation filtering. 
 
-	**Model**				Accuracy	Precision 	Recall      F1-Score
+	Model				Accuracy	Precision 	Recall      F1-Score
 	Support Vector Machine		  0.9851	     0.98	  0.99	        0.99
 	Logistic Regression		  0.9839	     0.98	  0.99	        0.98
 	LightGBM			  0.9741	     0.96	  0.99	        0.98
