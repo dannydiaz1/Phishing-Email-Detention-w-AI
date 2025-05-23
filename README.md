@@ -29,12 +29,16 @@ Though the SVM had the best recall and F1-score, it is a computationally expensi
 
 Challenges & Limitations
 Computational Costs: Advanced models (SVM, XGBoost, BERT) require significant processing power, which can impact real-time detection speed.
+
 Evolving Phishing Techniques: Attackers constantly adapt, making it necessary to update models regularly. 
+
 False Positives & False Negatives: While high recall minimizes false negatives, some legitimate emails may be wrongly classified as phishing.
 
 Future Improvements
 Incorporate Deep Learning (BERT, NNs) for contextual understanding.
+
 Real-Time URL Analysis & Sender Reputation Filtering to improve detection accuracy.
+
 Adaptive Learning Systems that can retrain models automatically based on new phishing patterns.
 
 
