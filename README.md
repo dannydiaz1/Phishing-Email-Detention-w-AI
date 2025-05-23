@@ -15,6 +15,16 @@ subject, bodies, and whether a url was present in the text.
 The models were then compared based on their ability to classify emails as phishing. This was done using accuracy, precision,
 recall, and F1-score, with recall being the most critical metric to minimize false negatives (missed phishing emails).
 
+
+	Model				Accuracy	Precision 	Recall      F1-Score
+	Support Vector Machine		  0.9851	     0.98	  0.99	        0.99
+	Logistic Regression		  0.9839	     0.98	  0.99	        0.98
+	LightGBM			  0.9741	     0.96	  0.99	        0.98
+	XGBoost				  0.9697	     0.95	  0.99	        0.97
+	Random Forest			  0.9818	     0.99	  0.98	        0.98
+	AdaBoost			  0.7771	     0.71	  0.97	        0.82
+	Multinomial Naïve Bayes		  0.9657	     0.97	  0.96	        0.97
+
 ## **Results**
 
 The Support Vector Machine (SVM) was the most effective model, achieving the highest recall (0.99) and F1-score (0.99).
@@ -40,18 +50,6 @@ Incorporate Deep Learning (BERT, NNs) for contextual understanding.
 Real-Time URL Analysis & Sender Reputation Filtering to improve detection accuracy.
 
 Adaptive Learning Systems that can retrain models automatically based on new phishing patterns.
-
-
-	Model				Accuracy	Precision 	Recall      F1-Score
-	Support Vector Machine		  0.9851	     0.98	  0.99	        0.99
-	Logistic Regression		  0.9839	     0.98	  0.99	        0.98
-	LightGBM			  0.9741	     0.96	  0.99	        0.98
-	XGBoost				  0.9697	     0.95	  0.99	        0.97
-	Random Forest			  0.9818	     0.99	  0.98	        0.98
-	AdaBoost			  0.7771	     0.71	  0.97	        0.82
-	Multinomial Naïve Bayes		  0.9657	     0.97	  0.96	        0.97
-
-
 
 ## **Data source:**
 
