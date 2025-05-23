@@ -6,11 +6,37 @@ Phishing attacks pose a significant cybersecurity threat, leading to financial l
 
 **Method**
 
-This project leverages machine learning models such as Support Vector Machines (SVM), XGBoost, and LightGBM to classify emails as phishing or legitimate. Using publicly available phishing and spam datasets, email text features are processed using TF-IDF vectorization. The goal is to deploy the model as an API that integrates with email providers to filter suspicious messages. 
+This project leverages machine learning models such as Support Vector Machines (SVM), XGBoost, and LightGBM to classify emails as phishing or legitimate. Using publicly available phishing and spam datasets, email text features are processed using TF-IDF vectorization. The goal is to deploy the model as an API that integrates with email providers to filter suspicious messages.
 
-**Outcome**
+Models were trained with ~80K emails sourced from the kaggle link below. The AI systems then determined patterns in the emails’
+subject, bodies, and whether a url was present in the text. 
 
-Preliminary results show high accuracy (~98%) and strong recall (~99%), effectively detecting phishing emails while minimizing false negatives. The goal is to integrate the system with existing email APIs to automatically filter phishing emails into spam folders. Future enhancements include advanced deep learning models (such as BERT), real-time phishing link analysis, and sender reputation filtering. 
+**Model Performance**
+The models were then compared based on their ability to classify emails as phishing. This was done using accuracy, precision,
+recall, and F1-score, with recall being the most critical metric to minimize false negatives (missed phishing emails).
+
+**Results**
+
+The Support Vector Machine (SVM) was the most effective model, achieving the highest recall (0.99) and F1-score (0.99).
+
+Random Forest had the highest precision (0.99), reducing false positives, but its recall was slightly lower (0.98).
+
+AdaBoost performed the worst, with an accuracy of 77.7% and low precision (0.71), making it unreliable for real-world deployment.
+
+Though the SVM had the best recall and F1-score, it is a computationally expensive model that would require extensive resources to deploy in a production environment. Therefore, the best option is the Random Forest. It scored highest in precision, its recall was only 0.01 behind the front-runner, and it is a light-weight model requiring significantly less resources than the SVM.
+
+**Considerations**
+
+Challenges & Limitations
+Computational Costs: Advanced models (SVM, XGBoost, BERT) require significant processing power, which can impact real-time detection speed.
+Evolving Phishing Techniques: Attackers constantly adapt, making it necessary to update models regularly. 
+False Positives & False Negatives: While high recall minimizes false negatives, some legitimate emails may be wrongly classified as phishing.
+
+Future Improvements
+Incorporate Deep Learning (BERT, NNs) for contextual understanding.
+Real-Time URL Analysis & Sender Reputation Filtering to improve detection accuracy.
+Adaptive Learning Systems that can retrain models automatically based on new phishing patterns.
+
 
 	Model				Accuracy	Precision 	Recall      F1-Score
 	Support Vector Machine		  0.9851	     0.98	  0.99	        0.99
